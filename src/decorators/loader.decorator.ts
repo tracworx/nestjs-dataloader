@@ -2,9 +2,9 @@ import { createParamDecorator, ExecutionContext, InternalServerErrorException } 
 import { InstanceToken } from '@nestjs/core/injector/module';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import DataLoader from 'dataloader';
-import { GQL_CONTEXT_KEY } from 'src/constants';
-import { DataloaderInterceptor } from 'src/interceptors/dataloader.interceptor';
-import { DataloaderMap } from 'src/services/dataloader-discovery.service';
+import { GQL_CONTEXT_KEY } from '../constants';
+import { DataloaderInterceptor } from '../interceptors/dataloader.interceptor';
+import { DataloaderMap } from '../services/dataloader-discovery.service';
 import { DataloaderProvider } from './dataloader-provider.decorator';
 
 /**

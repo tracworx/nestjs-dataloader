@@ -1,7 +1,7 @@
 import { CallHandler, ExecutionContext, Injectable, NestInterceptor } from '@nestjs/common';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Observable } from 'rxjs';
-import { GQL_CONTEXT_KEY } from 'src/constants';
+import { GQL_CONTEXT_KEY } from '../constants';
 import { DataloaderDiscoveryService } from '../services/dataloader-discovery.service';
 
 /**

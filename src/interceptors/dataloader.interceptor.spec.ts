@@ -3,8 +3,8 @@ import { CallHandler, ExecutionContext } from '@nestjs/common';
 import { DiscoveryModule } from '@nestjs/core';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Test, TestingModule } from '@nestjs/testing';
-import { GQL_CONTEXT_KEY } from 'src/constants';
-import { DataloaderDiscoveryService, DataloaderMap } from 'src/services/dataloader-discovery.service';
+import { GQL_CONTEXT_KEY } from '../constants';
+import { DataloaderDiscoveryService, DataloaderMap } from '../services/dataloader-discovery.service';
 import { DataloaderInterceptor } from './dataloader.interceptor';
 
 describe('DataloaderInterceptor', () => {

@@ -3,7 +3,7 @@ import { DiscoveryModule } from '@nestjs/core';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Test, TestingModule } from '@nestjs/testing';
 import DataLoader from 'dataloader';
-import { DataloaderProvider } from 'src/decorators/dataloader-provider.decorator';
+import { DataloaderProvider } from '../decorators/dataloader-provider.decorator';
 import { DataloaderDiscoveryService } from './dataloader-discovery.service';
 
 @DataloaderProvider()

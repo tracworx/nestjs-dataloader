@@ -4,8 +4,8 @@ import { InstanceWrapper } from '@nestjs/core/injector/instance-wrapper';
 import { InstanceToken } from '@nestjs/core/injector/module';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import DataLoader from 'dataloader';
-import { METADATA_KEY } from 'src/constants';
-import { DataloaderFactory } from 'src/interfaces/dataloader-factory.interface';
+import { METADATA_KEY } from '../constants';
+import { DataloaderFactory } from '../interfaces/dataloader-factory.interface';
 
 /**
  * Maps dataloader provider tokens to dataloader instances.
