@@ -76,7 +76,8 @@
       "^.+\\.(t|j)s$": "ts-jest"
     },
     "collectCoverageFrom": [
-      "**/*.(t|j)s"
+      "**/*.(t|j)s",
+      "!index.ts"
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
