@@ -1,10 +1,17 @@
 {
-  "name": "nestjs-dataloader",
+  "name": "@tracworx/nestjs-dataloader",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Quick and easy GraphQL dataloaders for NestJS",
+  "author": {
+    "name": "Eoin O'Brien",
+    "email": "eoin@tracworx.ai",
+    "url": "https://tracworx.ai/"
+  },
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
+  "readme": "README.md",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
