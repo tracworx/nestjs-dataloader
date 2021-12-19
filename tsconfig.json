@@ -1,4 +1,5 @@
 {
+  "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
     "module": "commonjs",
     "declaration": true,
@@ -13,10 +14,10 @@
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "esModuleInterop": true
   }
 }
