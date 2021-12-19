@@ -1,9 +1,9 @@
 import { createMock } from '@golevelup/ts-jest';
 import { InternalServerErrorException } from '@nestjs/common';
-import { DiscoveryModule } from '@nestjs/core';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Test, TestingModule } from '@nestjs/testing';
 import DataLoader from 'dataloader';
+import { DataloaderModule } from '..';
 import { DataloaderProvider } from '../decorators/dataloader-provider.decorator';
 import { DataloaderDiscoveryService } from './dataloader-discovery.service';
 
@@ -20,8 +20,8 @@ describe('DataloaderDiscoveryService', () => {
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
-      imports: [DiscoveryModule],
-      providers: [DataloaderDiscoveryService, TestLoader],
+      imports: [DataloaderModule],
+      providers: [TestLoader],
     }).compile();
 
     service = module.get<DataloaderDiscoveryService>(DataloaderDiscoveryService);

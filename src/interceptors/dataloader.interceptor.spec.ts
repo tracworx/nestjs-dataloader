@@ -1,8 +1,8 @@
 import { createMock } from '@golevelup/ts-jest';
 import { CallHandler, ExecutionContext } from '@nestjs/common';
-import { DiscoveryModule } from '@nestjs/core';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Test, TestingModule } from '@nestjs/testing';
+import { DataloaderModule } from '..';
 import { GQL_CONTEXT_KEY } from '../constants';
 import { DataloaderDiscoveryService, DataloaderMap } from '../services/dataloader-discovery.service';
 import { DataloaderInterceptor } from './dataloader.interceptor';
@@ -14,8 +14,8 @@ describe('DataloaderInterceptor', () => {
 
   beforeEach(async () => {
     module = await Test.createTestingModule({
-      imports: [DiscoveryModule],
-      providers: [DataloaderDiscoveryService, DataloaderInterceptor],
+      imports: [DataloaderModule],
+      providers: [DataloaderInterceptor],
     }).compile();
 
     service = module.get<DataloaderDiscoveryService>(DataloaderDiscoveryService);

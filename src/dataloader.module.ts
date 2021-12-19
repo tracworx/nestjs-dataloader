@@ -6,5 +6,6 @@ import { DataloaderDiscoveryService } from './services/dataloader-discovery.serv
 @Module({
   imports: [DiscoveryModule],
   providers: [DataloaderDiscoveryService, { provide: APP_INTERCEPTOR, useClass: DataloaderInterceptor }],
+  exports: [DataloaderDiscoveryService],
 })
 export class DataloaderModule {}
