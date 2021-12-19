@@ -1,4 +1,4 @@
-import { Injectable, OnModuleInit } from '@nestjs/common';
+import { Injectable, InternalServerErrorException, OnModuleInit } from '@nestjs/common';
 import { DiscoveryService } from '@nestjs/core';
 import { InstanceWrapper } from '@nestjs/core/injector/instance-wrapper';
 import { InstanceToken } from '@nestjs/core/injector/module';
@@ -18,7 +18,7 @@ export type DataloaderMap = Map<InstanceToken, DataLoader<any, any, any>>;
  */
 @Injectable()
 export class DataloaderDiscoveryService implements OnModuleInit {
-  private providers: InstanceWrapper<DataloaderFactory<any, any, any>>[];
+  private providers?: InstanceWrapper<DataloaderFactory<any, any, any>>[];
 
   constructor(private readonly discovery: DiscoveryService) {}
 
@@ -33,6 +33,9 @@ export class DataloaderDiscoveryService implements OnModuleInit {
   }
 
   createDataloaderMap(ctx: GqlExecutionContext): DataloaderMap {
+    if (!this.providers) {
+      throw new InternalServerErrorException(`discoverDataloaders() must be called before createDataloaderMap(...)`);
+    }
     return new Map(this.providers.map((factory) => [factory.token, factory.instance.createDataloader(ctx)]));
   }
 }

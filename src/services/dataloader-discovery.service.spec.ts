@@ -1,4 +1,5 @@
 import { createMock } from '@golevelup/ts-jest';
+import { InternalServerErrorException } from '@nestjs/common';
 import { DiscoveryModule } from '@nestjs/core';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Test, TestingModule } from '@nestjs/testing';
@@ -43,5 +44,10 @@ describe('DataloaderDiscoveryService', () => {
     const map = service.createDataloaderMap(mockGqlExecutionContext);
     expect(map.get(TestLoader)).toBeInstanceOf(DataLoader);
     expect(spy).toHaveBeenCalledWith(mockGqlExecutionContext);
+  });
+
+  it('should throw when trying to build dataloader map before init', () => {
+    const mockCtx = createMock<GqlExecutionContext>();
+    expect(() => service.createDataloaderMap(mockCtx)).toThrow(InternalServerErrorException);
   });
 });
