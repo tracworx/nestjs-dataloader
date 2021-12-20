@@ -25,6 +25,9 @@
   "readme": "README.md",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
@@ -35,7 +38,9 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "preversion": "npm test && npm run test:e2e && npm run build",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run test:e2e && npm run lint",
+    "preversion": "npm test && npm run test:e2e",
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
