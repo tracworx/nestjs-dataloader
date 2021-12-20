@@ -1,4 +1,5 @@
 {
+  "extends": ["workarounds:typesNodeVersioning"],
   "packageRules": [
     {
       "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
