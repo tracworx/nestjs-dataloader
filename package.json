@@ -21,7 +21,6 @@
     "email": "eoin@tracworx.ai",
     "url": "https://tracworx.ai/"
   },
-  "private": true,
   "license": "MIT",
   "readme": "README.md",
   "main": "dist/index.js",
