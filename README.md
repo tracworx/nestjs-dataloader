@@ -15,13 +15,63 @@
 
 ## Description
 
-[Nest](https://github.com/tracworx/nestjs-dataloader) framework TypeScript starter repository.
+Quick and easy GraphQL [dataloaders](https://github.com/graphql/dataloader) for NestJS.
 
 ## Installation
 
 ```bash
-$ npm install
+$ npm install @tracworx/nestjs-dataloader
 ```
+
+## Usage
+
+Import the `DataloaderModule` in your root module.
+
+```typescript
+import { Module } from '@nestjs/common';
+import { DataloaderModule } from '@tracworx/nestjs-dataloader';
+import { ItemResolver } from './item.resolver';
+import { ItemLoader } from './item.loader';
+
+@Module({
+  imports: [DataloaderModule],
+  providers: [ItemResolver, ItemLoader],
+})
+export class AppModule {}
+```
+
+Decorate dataloader factory classes with `@DataloaderProvider()` to automatically provide them to the GraphQL context object for each request.
+
+```typescript
+import DataLoader from 'dataloader';
+import { DataloaderProvider } from '@tracworx/nestjs-dataloader';
+
+@DataloaderProvider()
+class ItemLoader {
+  createDataloader() {
+    // Replace this with your actual dataloader implementation
+    return new DataLoader<string, Item>(async (ids) => getItemsWithIds(ids));
+  }
+}
+```
+
+Use `@Loader(...)` to inject a dataloader instance into your resolver methods.
+
+```typescript
+import DataLoader from 'dataloader';
+import { Loader } from '@tracworx/nestjs-dataloader';
+import { ItemLoader } from './item.loader';
+
+@Resolver()
+class ItemResolver {
+  @Query(() => Item, { name: 'item' })
+  getItem(@Args('id') id: string, @Loader(ItemLoader) itemLoader) {
+    return itemLoader.load(id);
+  }
+}
+```
+
+And that's it. Happy coding!
 
 ## Development
 
