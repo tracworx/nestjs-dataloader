@@ -1,7 +1,8 @@
 {
   "extends": [
     "config:base",
-    "workarounds:typesNodeVersioning"
+    "workarounds:typesNodeVersioning",
+    ":disableDependencyDashboard"
   ],
   "packageRules": [
     {
