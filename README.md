@@ -1,19 +1,14 @@
 # GraphQL Dataloaders for NestJS
 
-[circleci-image]: https://img.shields.io/circleci/build/github/tracworx/nestjs-dataloader/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/tracworx/nestjs-dataloader
-
-<p align="center">
-  <a href="https://www.npmjs.com/package/@tracworx/nestjs-dataloader" target="_blank"><img src="https://img.shields.io/npm/v/@tracworx/nestjs-dataloader.svg" alt="NPM Version" /></a>
-  <a href="https://www.npmjs.com/package/@tracworx/nestjs-dataloader" target="_blank"><img src="https://img.shields.io/npm/l/@tracworx/nestjs-dataloader.svg" alt="Package License" /></a>
-  <a href="https://www.npmjs.com/package/@tracworx/nestjs-dataloader" target="_blank"><img src="https://img.shields.io/npm/dm/@tracworx/nestjs-dataloader.svg" alt="NPM Downloads" /></a>
-  <a href="https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml" target="_blank"><img src="https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml/badge.svg" alt="Lint Code Base" /></a>
-  <a href="https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml" target="_blank"><img src="https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml/badge.svg" alt="Node.js CI" /></a>
-  <a href="https://github.com/tracworx/nestjs-dataloader/actions/workflows/npm-publish.yml" target="_blank"><img src="https://github.com/tracworx/nestjs-dataloader/actions/workflows/npm-publish.yml/badge.svg" alt="Node.js Package" /></a>
-  <a href="https://codeclimate.com/github/tracworx/nestjs-dataloader/maintainability"><img src="https://api.codeclimate.com/v1/badges/27476749d468e511ecdd/maintainability" /></a>
-  <a href="https://codeclimate.com/github/tracworx/nestjs-dataloader/test_coverage"><img src="https://api.codeclimate.com/v1/badges/27476749d468e511ecdd/test_coverage" /></a>
-  <a href="https://twitter.com/realEoinOBrien" target="_blank"><img src="https://img.shields.io/twitter/follow/realEoinOBrien.svg?style=social&label=Follow"></a>
-</p>
+[![NPM Version](https://img.shields.io/npm/v/@tracworx/nestjs-dataloader.svg)](https://www.npmjs.com/package/@tracworx/nestjs-dataloader)
+[![Package License](https://img.shields.io/npm/l/@tracworx/nestjs-dataloader.svg)](https://www.npmjs.com/package/@tracworx/nestjs-dataloader)
+[![NPM Downloads](https://img.shields.io/npm/dm/@tracworx/nestjs-dataloader.svg)](https://www.npmjs.com/package/@tracworx/nestjs-dataloader)
+[![Lint Code Base](https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml)
+[![Node.js CI](https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml)
+[![Node.js Package](https://github.com/tracworx/nestjs-dataloader/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/npm-publish.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/27476749d468e511ecdd/maintainability)](https://codeclimate.com/github/tracworx/nestjs-dataloader/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/27476749d468e511ecdd/test_coverage)](https://codeclimate.com/github/tracworx/nestjs-dataloader/test_coverage)
+[![Twitter](https://img.shields.io/twitter/follow/realEoinOBrien.svg?style=social&label=Follow)](https://twitter.com/realEoinOBrien)
 
 ## Description
 
