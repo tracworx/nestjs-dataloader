@@ -45,9 +45,11 @@ import { DataloaderProvider } from '@tracworx/nestjs-dataloader';
 
 @DataloaderProvider()
 class ItemLoader {
-  createDataloader() {
+  createDataloader(ctx: GqlExecutionContext) {
+    // Fetch request-scoped context data if needed
+    const user = ctx.getContext().req.user;
     // Replace this with your actual dataloader implementation
-    return new DataLoader<string, Item>(async (ids) => getItemsWithIds(ids));
+    return new DataLoader<string, Item>(async (ids) => getItemsWithIds(user, ids));
   }
 }
 ```
