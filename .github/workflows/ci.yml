@@ -47,7 +47,7 @@ jobs:
 
       - name: Update commit status
         if: always()
-        uses: ouzi-dev/commit-status-updater@v1.1.0
+        uses: ouzi-dev/commit-status-updater@v1.1.2
         with:
           name: 'Node.js CI ${{ matrix.node-version }}'
           status: '${{ job.status }}'
