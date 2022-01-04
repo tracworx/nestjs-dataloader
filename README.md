@@ -2,6 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/@tracworx/nestjs-dataloader.svg)](https://www.npmjs.com/package/@tracworx/nestjs-dataloader)
 [![Package License](https://img.shields.io/npm/l/@tracworx/nestjs-dataloader.svg)](https://www.npmjs.com/package/@tracworx/nestjs-dataloader)
+![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/npm/@tracworx/nestjs-dataloader)
 [![NPM Downloads](https://img.shields.io/npm/dm/@tracworx/nestjs-dataloader.svg)](https://www.npmjs.com/package/@tracworx/nestjs-dataloader)
 [![Lint Code Base](https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml)
 [![Node.js CI](https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml)
