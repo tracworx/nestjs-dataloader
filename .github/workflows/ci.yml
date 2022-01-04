@@ -19,17 +19,35 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: npm ci
-      - run: npm run build --if-present
-      - run: npm run test:cov
-      - run: npm run test:e2e
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build --if-present
+
+      - name: Run tests and check coverage
+        run: npm run test:cov
+
+      - name: Run e2e tests
+        run: npm run test:e2e
+
       - name: Publish code coverage
         uses: paambaati/codeclimate-action@v3.0.0
         env:
           CC_TEST_REPORTER_ID: ff9813ef7d7909d6c22de26465eceafb97a51ded0d4aa0b1fa3213312ca8e343
+
+      - name: Update commit status
+        if: always()
+        uses: ouzi-dev/commit-status-updater@v1.1.0
+        with:
+          name: 'Node.js CI ${{ matrix.node-version }}'
+          status: '${{ job.status }}'

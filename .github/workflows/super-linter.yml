@@ -8,9 +8,9 @@ name: Lint Code Base
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 jobs:
   run-lint:
     runs-on: ubuntu-latest
@@ -31,3 +31,9 @@ jobs:
           TYPESCRIPT_DEFAULT_STYLE: prettier
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update commit status
+        if: always()
+        uses: ouzi-dev/commit-status-updater@v1.1.0
+        with:
+          status: '${{ job.status }}'
