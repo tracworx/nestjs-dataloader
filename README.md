@@ -6,8 +6,8 @@
 [![Lint Code Base](https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/super-linter.yml)
 [![Node.js CI](https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/ci.yml)
 [![Node.js Package](https://github.com/tracworx/nestjs-dataloader/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/tracworx/nestjs-dataloader/actions/workflows/npm-publish.yml)
-[![Maintainability](https://api.codeclimate.com/v1/badges/27476749d468e511ecdd/maintainability)](https://codeclimate.com/github/tracworx/nestjs-dataloader/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/27476749d468e511ecdd/test_coverage)](https://codeclimate.com/github/tracworx/nestjs-dataloader/test_coverage)
+[![Maintainability](https://img.shields.io/codeclimate/maintainability/tracworx/nestjs-dataloader)](https://codeclimate.com/github/tracworx/nestjs-dataloader/maintainability)
+[![Test Coverage](https://img.shields.io/codeclimate/coverage/tracworx/nestjs-dataloader)](https://codeclimate.com/github/tracworx/nestjs-dataloader/test_coverage)
 [![Twitter](https://img.shields.io/twitter/follow/realEoinOBrien.svg?style=social&label=Follow)](https://twitter.com/realEoinOBrien)
 
 ## Description
