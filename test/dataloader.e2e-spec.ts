@@ -2,6 +2,7 @@ import { INestApplication } from '@nestjs/common';
 import { Args, Field, GraphQLModule, ObjectType, Query, Resolver } from '@nestjs/graphql';
 import { Test, TestingModule } from '@nestjs/testing';
 import DataLoader from 'dataloader';
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { DataloaderModule, DataloaderProvider, Loader } from '../src';
 import request = require('supertest');
 
@@ -39,7 +40,10 @@ describe('DataloaderModule (e2e)', () => {
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [DataloaderModule, GraphQLModule.forRoot({ autoSchemaFile: true })],
+      imports: [
+        DataloaderModule,
+        GraphQLModule.forRoot<ApolloDriverConfig>({ autoSchemaFile: true, driver: ApolloDriver }),
+      ],
       providers: [ItemResolver, ItemLoader],
     }).compile();
 
