@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@golevelup/ts-jest": "0.3.2",
-    "@nestjs/apollo": "10.0.3",
+    "@nestjs/apollo": "10.0.4",
     "@nestjs/cli": "8.2.1",
     "@nestjs/common": "8.3.1",
     "@nestjs/core": "8.3.1",
