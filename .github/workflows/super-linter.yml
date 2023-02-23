@@ -34,6 +34,6 @@ jobs:
 
       - name: Update commit status
         if: always()
-        uses: ouzi-dev/commit-status-updater@v1.1.2
+        uses: ouzi-dev/commit-status-updater@v2.0.1
         with:
           status: '${{ job.status }}'
