@@ -1,8 +1,9 @@
 import { createMock } from '@golevelup/ts-jest';
-import { CallHandler, ExecutionContext } from '@nestjs/common';
+import { CallHandler } from '@nestjs/common';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { Test, TestingModule } from '@nestjs/testing';
 import { DataloaderModule } from '..';
+import { executionContextMockFactory } from '../../test/utils';
 import { GQL_CONTEXT_KEY } from '../constants';
 import { DataloaderDiscoveryService, DataloaderMap } from '../services/dataloader-discovery.service';
 import { DataloaderInterceptor } from './dataloader.interceptor';
@@ -27,7 +28,7 @@ describe('DataloaderInterceptor', () => {
   });
 
   it('should inject dataloaders into the GraphQL context object', () => {
-    const mockExecutionContext = createMock<ExecutionContext>();
+    const mockExecutionContext = executionContextMockFactory({}, {});
     const mockGqlExecutionContext = GqlExecutionContext.create(mockExecutionContext);
     const mockCallHandler = createMock<CallHandler>();
     const mockDataloaders = createMock<DataloaderMap>();
