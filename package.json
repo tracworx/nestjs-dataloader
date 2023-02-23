@@ -1,6 +1,6 @@
 {
   "name": "@tracworx/nestjs-dataloader",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Quick and easy GraphQL dataloaders for NestJS",
   "keywords": [
     "nest",
