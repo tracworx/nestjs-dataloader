@@ -61,7 +61,7 @@
     "@nestjs/cli": "9.3.0",
     "@nestjs/common": "9.4.0",
     "@nestjs/core": "9.4.0",
-    "@nestjs/graphql": "10.2.0",
+    "@nestjs/graphql": "10.2.1",
     "@nestjs/platform-express": "9.4.0",
     "@nestjs/schematics": "9.1.0",
     "@nestjs/testing": "9.4.0",
