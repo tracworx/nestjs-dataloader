@@ -56,7 +56,7 @@
     "tslib": "^2.3.1"
   },
   "devDependencies": {
-    "@golevelup/ts-jest": "0.3.7",
+    "@golevelup/ts-jest": "0.3.8",
     "@nestjs/apollo": "10.2.1",
     "@nestjs/cli": "10.1.1",
     "@nestjs/common": "9.4.3",
